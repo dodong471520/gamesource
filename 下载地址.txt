@@ -37,3 +37,7 @@ http://www.daysou.com/s?q=&start=0&isget=1&tp=baipan&cl=0&line=3
 
 相关
 http://www.src.cool/plugin.php?id=userip:show
+
+
+一键端
+http://www.danyouwang.com/
