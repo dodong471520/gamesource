@@ -1,0 +1,14 @@
+H:\work\source\蛋清OL\[src.cool]蛋清OL\源代码\server\ServerSystem\Scene\SceneObject.h 3 KB H 文件 2007/12/17 9:49:34 2018/9/18 17:11:45 2018/9/18 17:11:45 1
+113 		eternalOfLife = flag;
+114 	}
+115 	//下面这两个方法用来实现，跨区域的 可见性。
+116 	//第一个函数，指出一个 场景对象是不是 
+117 	virtual bool isRegionWatcher()
+
+H:\work\source\辉煌\[src.cool]辉煌OL\code\Server\GameServer\share\protocol.h 31 KB H 文件 2010/1/13 10:06:22 2018/9/26 20:24:39 2018/9/26 20:24:39 1
+62 		MAPGROUP_UPDATE_TEAM_LEADER = MAPGROUP_BASE + 32,           // 更改队长 [哈达 ?7/7/2008]
+63 		MAPGROUP_FORBID_IPROLE		= MAPGROUP_BASE + 33,			// 所有区封IP上的用户 [Chancy 2008-9-12 16:43]
+64 		MAPGROUP_FORBID_SEND_MACID_TIMEOUT /*= MAPGROUP_BASE + 34*/,			// 跨区封发机超 [Chancy 2008-9-30 0:20]
+65 		MAPGROUP_SET_PLAYER_EXP		= MAPGROUP_BASE + 35,		//设置玩家打完怪翻几倍经验奖励
+66 		MAPGROUP_QUERY_USER			= MAPGROUP_BASE + 36,			// 远程查询玩家是否在线,或其他
+

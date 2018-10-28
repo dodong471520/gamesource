@@ -1,0 +1,43 @@
+H:\work\source\大唐豪侠\datang client full code\ENGINE\Src\ArkCore\ArkCoreLogic\CSCoreLogicShared\CRegion.cpp 11 KB CPP 文件 2005/7/6 14:12:16 2018/9/18 17:10:58 2018/9/18 17:10:58 1
+394 /*
+395  *	将对象与区域和相关联
+396  *  对象创建和跨区域的时候都会调用，也就是对象进入区域的时候会调用
+397  */
+398 void CRegion::AddObject2Region( CCoreObject* pCoreObject)
+
+H:\work\source\灭神\[src.cool]灭神OL\src\CleanEngine\Engine\Scene\SceneZone.cpp 67 KB CPP 文件 2010/1/13 21:37:20 2018/7/2 22:49:05 2018/7/2 22:49:05 2
+1251 			if(nPos >= 0)
+1252 			{
+1253 				// 如果是灯光,检测是否跨区域,目前不支持跨区域编辑
+1254 				if(m_pObjects[nPos].m_ObjectF.m_eType == ScnObj_Light)
+1255 				{
+
+H:\work\source\辉煌\[src.cool]辉煌OL\code\Server\GameServer\mapgroupkernel\MapGroupKernel.cpp 44 KB CPP 文件 2010/1/6 16:09:06 2018/9/26 20:24:35 2018/9/26 20:24:35 3
+931 		}
+932 		break;
+933 	case MAPGROUP_FORBID_IPROLE: // 跨区封IP上的用户 [Chancy 2008-9-12 17:02]
+934 		{
+935 			const ST_FORBID_IP *pForbidIpRole = ( const ST_FORBID_IP*)buf ;
+942 				in_addr addr ;
+943 				addr.S_un.S_addr = pForbidIpRole->dwIp ;
+944 				SafeSprintf( szMsg , sizeof(szMsg) , "%s跨区封IP %s:%s" , 
+945 						pForbidIpRole->szGmRoleName , 
+946 						inet_ntoa( addr ) , 
+961 			{
+962 				MSGBUF szMsg = "" ;
+963 				SafeSprintf( szMsg , sizeof(szMsg) , "%s跨区封发机超 %d:%s" , 
+964 					pForbidIpRole->szGmRoleName , 
+965 					pForbidIpRole->dwMinTimeOutAmount , 
+
+H:\work\source\辉煌\[src.cool]辉煌OL\code\Server\GameServer\worldkernel\YyCntSvrClientSink.cpp 4 KB CPP 文件 2010/1/6 16:09:02 2018/9/26 20:24:40 2018/9/26 20:24:40 2
+46 	SafeCopy( msg.szReason , szReason , sizeof(msg.szReason) ) ;
+47 	SafeCopy( msg.szGmRoleName , szGmRoleName , sizeof(msg.szGmRoleName) ) ;
+49 	LOGMSG( "跨区封Ip, GmAccount %d , GmRole %d , Ip %d , 理由:%s" ,
+50 				dwGmAccountId , dwGmRoleId , dwIp , szReason  ) ;
+52 	for(int i = MSGPORT_MAPGROUP_FIRST; i < m_pMsgPort->GetSize(); i++)
+72 	SafeCopy( msg.szGmRoleName , szGmRoleName , sizeof(msg.szGmRoleName) ) ;
+73 	
+74 	LOGMSG( "跨区封发机超, GmAccount %d , GmRole %d , amount %d , 理由:%s" ,
+75 		dwGmAccountId , dwGmRoleId , dwMinTimeOutAmount, szReason  ) ;
+76 	
+
